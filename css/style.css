@@ -1,0 +1,2105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+/* Global CSS */
+img{
+    display: block;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+
+.line{
+    width: 110px;
+    height: 2px;
+    background-color: var(--main1);
+    position: absolute;
+    border:.07rem solid var(--main1);
+}
+/* Variables */
+:root{
+    --light-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    --main1:#E41C26;
+    --main2:#111111;
+    --main3:#222222;
+    --main4:#EEEEEE;
+}
+.btn{
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border:1px solid var(--main1);
+    border-radius:3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+section{
+    margin: 0 16rem;
+}
+html::-webkit-scrollbar{
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background-color:var(--main1) ;
+}
+/* Global ends */
+
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+header .logo{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main1);
+    width:150px;
+    height:80px;
+}
+header .logo img{
+    width:70%;
+}
+header .social{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: black;
+    padding: 0;
+}
+header .social .num{
+    margin-left:10rem;
+}
+header .social .num span{
+    color:white;
+    margin-right: 3rem;
+}
+header .social .num span a{
+    color:white;
+}
+header .social .num span a:hover{
+    color:#555454;
+}
+header .social .num span i{
+    margin-right:.5rem;
+    cursor: pointer;
+}
+header .social .num span i:hover{
+    color: var(--main1);
+}
+header .social .num span .me{
+    color: white;
+}
+header .social .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .icon .soc{
+    background-color:transparent;
+    border:1px solid #555454;
+    width:35px;
+    height:35px;
+    border-radius:1.5px;
+}
+header .icon .soc:hover{
+    background-color: var(--main1);
+    border: none;
+}
+header .icon .soc a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    width: 100%;
+    height: 100%;
+}
+header .navg{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* padding: 1rem 0; */
+    background-color: #fff;
+    box-shadow:var(--light-shadow);
+}
+header .navg .close{
+    display: none;
+}
+header .navg nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+header .navg nav .search{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 0px 1px;
+    cursor: pointer;
+}
+header .navg nav .search:hover{
+    background-color: var(--main2);
+    color: white;
+}
+header .navg nav a{
+    color: var(--main2);
+    text-transform: uppercase;
+    font-size:.8rem;
+}
+header .navg nav a:hover{
+    color:var(--main1);
+}
+
+header .navg .menu{
+    background-color: var(--main1);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+/* hero */
+.hero{
+    position: relative;
+    padding-top:80px;
+    margin-bottom:-20px;
+}
+.hero .title{
+    position: absolute;
+    color:white;
+    top:30%;
+    left:10%;
+}
+.hero .title .head{
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.hero .title .head h1{
+    font-size:3rem;
+}
+.hero .title .head p{
+    margin: 1rem 0;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    font-family:'Poppins';
+}
+.hero .title .head .btn{
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+}
+.hero .title .head .btn:hover{
+    border-color: white;
+}
+.mySlides{
+    display:none;
+}
+
+/* boxes */
+.box{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.box .boxes{
+    flex:1 1 25rem;
+    min-width:300px;
+    min-height: 300px;
+    background-color: var(--main3);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.box .boxes .right{
+    width: 15rem;
+    position: absolute;
+    left:16rem;
+    top:10%;
+}
+.box .boxes .right .card{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    gap:.4rem;
+    width: 100%;
+}
+.box .boxes .right .card h2{
+    text-transform: uppercase;
+    font-size: 1rem;
+    /* font-family: 'Cookie'; */
+    margin-top: 0.5rem;
+}
+.box .boxes .right .card p{
+    line-height: 1.5;
+}
+.box .boxes .right .card .imgsm{
+    width:50px;
+}
+.box .boxes .right .card .imgsm img{
+    width: 100%;
+}
+.box .boxes .right .card .imgS {
+    width:35px;
+}
+.box .boxes .right .card .imgS img{
+    width: 100%;
+}
+
+.box .boxes .right .card .imglg{
+    position: absolute;
+    width:150px;
+    left:7rem;
+    top:9rem;
+}
+.box .boxes .right .card .imglg img{
+    width: 100%;
+}
+.box .boxes .right .card .imgL{
+    width:120px;
+}
+.box .boxes .right .card .imgL img{
+    width: 100%;
+}
+.box .boxes:nth-child(2){
+    background-color: var(--main4);
+    color: #111111;
+}
+.box .boxes:nth-child(2) .card h2{
+    color: var(--main1);
+}
+.box .boxes:nth-child(2) .right{
+    left:8rem;
+}
+.box .boxes:nth-child(2) .right .card .imglg{
+    left:14rem;
+    top:7.5rem;
+}
+.box .boxes:nth-child(3){
+    background-color: var(--main1);
+
+}
+.box .boxes:nth-child(3) .right{
+    left:3rem;
+}
+.box .boxes:nth-child(3) .right .card .imglg{
+    left:10rem;
+    top:7.5rem;
+}
+/* about */
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+.about .col{
+    flex:1 1 25rem;
+}
+.about .col .row{
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap:1rem;
+}
+.about .col .row .info h5{
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+.about .col .row .info .title{
+    position: relative;
+}
+.about .col .row .info .title h1{
+    text-transform: capitalize;
+    font-size:2.5rem;
+}
+.about .col .row .info .line{
+    position: absolute;
+    width: 140px;
+    height: 2px;
+    background-color: var(--main1);
+    bottom:0;
+}
+.about .col .row .info p{
+    margin:1rem 0;
+    line-height: 1.5;
+} 
+.about .col .row .fitness .box{
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    gap:2rem;
+}
+.about .col .row .fitness .box .fitImg{
+    width:50px;
+    height:40px;
+}
+.about .col .row .fitness .box .fitImg img{
+    height: 100%;
+}
+.about .col .row .fitness .box .fitInfo h4{
+    margin-bottom: 0.5rem;
+}
+.about .col .row .fitness .box .fitInfo p{
+    font-size: 0.9rem;
+    color: #555454;
+}
+.about .col .about-bg{
+    position: relative;
+}
+.about .col .about-bg .slash{
+    position: absolute;
+    top:20%;
+    left:2.8rem;
+    z-index:-1;
+    width:40rem;
+}
+/* about ends */
+
+/* Commercials*/
+.commercials{
+    background-color: var(--main2);
+    color: white;
+    min-height:80vh;
+}
+.commercials section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.commercials .col-1 .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.commercials .col-1 .title img{
+    width:300px;
+    margin-top:3rem;
+}
+.commercials .col-1 .title .info{
+    font-size:1.2rem;
+    text-transform: uppercase;
+    position: absolute;
+    top:32%;;
+}
+.commercials .col-1 .title .info .line{
+    left:35%;
+    width:85px;
+}
+.commercials .col-1 .title p{
+    text-align: center;
+    margin:2rem 0;
+}
+.mySlide1{
+    display: none;
+}
+.commercials .col-4 .slideshow-container .mySlide1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+}
+.commercials .col-4 .box{
+    flex:1 1 15rem;
+    margin: auto;
+    width:230px;
+    height:230px;
+    align-self: normal;
+    flex-direction: column;
+    background-color: var(--main3);
+    box-shadow: var(--light-shadow);
+    border-radius:5px;
+    cursor: pointer;
+}
+.commercials .col-4 .box:hover{
+    border-bottom:1px solid var(--main1);
+    color: white;
+}
+.commercials .col-4 .box .card .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:1rem;
+    margin:1rem;
+    max-width: 100%;
+    max-height: 100%;
+}
+.commercials .col-4 .box .card .title h4{
+    text-transform: uppercase;
+}
+.commercials .col-4 .box .card .title p{
+    font-size: 0.75rem;
+    color: #898787;
+}
+.commercials .col-4 .box .card .title .imgBx{
+    width:90px;
+    height:90px;
+}
+.commercials .col-4 .box .card .title .imgBx img{
+    width: 100%;
+    height: 100%;
+}
+.commercials .dotted,
+.trainings .dotted{
+    display: flex;
+    gap:.5rem;
+    margin-top:4rem;
+}
+.commercials .dotted .dot,
+.trainings .dotted .dot{
+    width: 23px;
+    height:3px;
+    border-radius:3px;
+    background-color:#898787;
+    text-align: center;
+    cursor: pointer;
+}
+.commercials .dotted .dot:hover,
+.trainings .dotted .dot:hover{
+    background-color: var(--main1);
+}
+/* Commercials ends */
+/* trains */
+.train{
+    position:relative;
+}
+.infoHead{
+    position: absolute;
+    margin-right: 0;
+    display: flex;
+    top: -4rem;
+}
+.infoHead .col-lg{
+    /* flex:1 1 75rem; */
+    width: 100%;
+    /* height:11.9rem; */
+    background-color: var(--main1);
+    color: white;
+}
+.infoHead .col-lg .box{
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    gap:1rem;
+    margin:1rem;
+}
+.infoHead .col-lg .head{
+    position: relative;
+}
+.infoHead .col-lg .box .head h1{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.infoHead .col-lg .box .head .line{
+    background-color: #fff;
+    width: 90px;
+}
+.infoHead .col-lg .box p{
+    width:90%;
+}
+.infoHead .col-lg .box .btn{
+    border:1px solid white;
+    color: white;
+    
+}
+.infoHead .col-lg .box .btn:hover{
+    border-color:var(--main2);
+}
+/* testimonials */
+.testimonial{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    margin-top: 13rem;
+    margin-bottom: 2rem;
+    margin-right: 0;
+}
+.testimonial .testInfo{
+    flex:1 1 20rem;
+}
+.testInfo .testHead{
+    width:33rem;
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+}
+.testInfo .testHead .title h4{
+    text-transform: uppercase;
+    color: #898787;
+    margin-bottom: 0.5rem;
+}
+.testInfo .testHead .title h1{
+    text-transform: capitalize;
+    font-size:3.5rem;
+}
+.testInfo .testHead .details .card h5{
+    color: #898787;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    text-transform: capitalize;
+}
+.testInfo .testHead .details .card h1{
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+.testInfo .testHead .details .card .icons{
+    color:orange;
+    margin-bottom:2rem;
+}
+.testInfo .testHead .details .card p{
+    color: #898787;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+.testimonial .testInfo .dot{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.8rem;
+}
+.testimonial .testInfo .dot span i{
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+.testimonial .testInfo .dot span i:hover{
+    color: #E41C26;
+}
+
+.testimonial .testImg{
+    flex:1 1 25rem;
+    position: relative;
+}
+.testimonial .testImg .imgbg{
+    width:13rem;
+    left:9rem;
+    position: absolute;
+}
+.testimonial .testImg .imgbg img{
+    width: 100%;
+    cursor: pointer;
+    box-shadow: var(--light-shadow);
+    border-radius:3px;
+    filter: grayscale(100);
+    transition:.5s ease;
+}
+.testimonial .testImg .imgbg:nth-child(1) img{
+    position: absolute;
+    top:-12rem;
+}
+.testimonial .testImg .imgbg:nth-child(2) img{
+    position: absolute;
+    left:-9rem;
+    top: -2rem;
+}
+.testimonial .testImg .imgbg:nth-child(3) img{
+    position: absolute;
+    left:9rem;
+}
+.testimonial .testImg .imgbg:nth-child(4) img{
+    position: absolute;
+    top:6rem;
+}
+.testimonial .testImg img:hover{
+    z-index:1;
+    transform: scale(.98);
+    filter: grayscale(0);
+}
+/* testimonials ends */
+
+/* sponsors */
+.sponsor{
+    background-color: var(--main2);
+    margin-top:8rem;
+    min-height: 30vh;
+}
+.sponsor section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+}
+.sponsor section .r4{
+    flex:1 1 20rem;
+    color: white;
+    margin-top:3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+.sponsor section .r4 .title{
+    margin-top:.4rem;
+}
+.sponsor section .r4 .title p{
+    text-transform: uppercase;
+    font-size:.8rem;
+}
+.sponsor section .r4 .imgX{
+    width:50px;
+    height:50px;
+}
+.sponsor section .r4 .imgX img{
+    height: 100%;
+}
+/* sponsors ends */
+
+/* Advert */
+.advert section{
+    margin: 0;
+}
+.advert{
+    position: relative;
+    margin-bottom: 2rem;
+}
+.advert .vidtitle{
+    width:8rem;
+    position: absolute;
+    left: 0;
+    top:7rem;
+}
+.advert .vidtitle img{
+    width: 100%;
+}
+.advert .bgImg{
+    width:60rem;
+    height:30rem;
+    position: absolute;
+    right:15rem;
+}
+.advert .bgImg img{
+    width: 100%;
+    height: 100%;
+}
+.advert .vid video{
+    width:55%;
+    border-radius: 5px;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top:-5rem;
+}
+/* Advert ends */
+
+/* Trainings */
+.trainings section{
+    margin-top:37rem;
+    position: relative;
+    margin-bottom:1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.trainings .head  .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.trainings .head  .card h1{
+    text-transform: capitalize;
+    font-size:2rem;
+}
+.trainings .head .imgTrain{
+    position: absolute;
+    width:15rem;
+    left:38%;
+    top:-1rem;
+} .trainings .head  .card .line{
+    position: absolute;
+    bottom:.3rem;
+}
+.trainings .head p{
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 1.5;
+}
+.trainings .row .mySlide3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:3rem;
+    margin: 3rem 0 1rem 0;
+}
+.trainings .row .mySlide3 .vid{
+    width:30rem;
+    position: relative;
+}
+.trainings .row .mySlide3 .vid video{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.trainings .row .mySlide3 .vid .bg{
+    background-color:white;
+    padding:.5rem 1rem;
+    border-top-right-radius:3px;
+    border-top-left-radius:3px;
+    box-shadow: var(--light-shadow);
+    position: absolute;
+    width:70%;
+    text-align: center;
+    left:4rem;
+    bottom:-2rem;
+}
+.trainings .row .mySlide3 .vid .bg h5{
+    color: var(--main1);
+    margin-bottom: 0.3rem;
+    font-size: 0.7rem;
+}
+
+/* Trainings ends*/
+
+/* Promo */
+.promo{
+    position: relative;
+    margin-top:6rem;
+}
+.promo .promobg{
+    position: relative;
+    height:20rem;
+}
+.promo .promobg img{
+    height: 100%;
+}
+.promo .promobg .shadow{
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.promo section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    position: absolute;
+    top:-5rem;
+}
+.promo section .title{
+    color: white;
+    margin-top: 2rem;
+} 
+.promo section .title .line{
+    width:200px;
+}
+.promo section .title h1{
+    text-transform: capitalize;
+    font-size:3rem;
+}
+.promo section .title p{
+    width:90%;
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+.promo section .title .btn{
+    color:white;
+    border:1px solid white;
+}
+.promo section .title .btn:hover{
+    border:1px solid var(--main1);
+}
+/* Promo ends */
+
+/* Whey Promo */
+.whey{
+    position: relative;
+}
+.whey .wheyPro{
+    width: 6rem;
+    position: absolute;
+    left: 0;
+    top: 14rem;
+}
+.whey .wheyPro img{
+    width: 100%;
+}
+.whey .wheyBg{
+    width:85rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.whey section{
+    background-color: #fff;
+    width:75rem;
+    height:34.3rem;
+    right:-6rem;
+    top:5.5rem;
+    border-radius: 5px;
+    box-shadow: var(--light-shadow);
+    position: absolute;
+}
+ .whey section .header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+ }
+.whey section .row{
+    flex:1 1 10rem;
+}
+.whey section .row1{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.whey section .borderline{
+    position: absolute;
+    width: 17rem;
+    height:22rem;
+    border:.4rem solid var(--main1);
+    top:-2rem;
+}
+.whey section .row .border .imgbox{
+    width: 21rem;
+}
+.whey section .row .border .imgbox:nth-child(2){
+    width: 25rem;
+    position: absolute;
+    top:-3rem;
+    right:-1rem;
+    bottom:-1.5rem;
+}
+.whey section .row .card {
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap:1rem;
+}
+.whey section .row .card  h6{
+    text-transform: uppercase;
+    color: #898787;
+}
+.whey section .row .card  h1{
+    text-transform:uppercase;
+    font-size: 2rem;
+}
+.whey section .row .card .line{
+    
+}
+.whey section .row .card p{
+    font-size: 0.8rem;
+}
+.whey section .row .card .btn_1{
+    display: flex;
+    align-items:flex-start;
+    gap:.5rem;
+}
+.whey section .row .card .btn_1 .btn{
+    border-radius:1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #ECECEC;
+    border:1px solid #ECECEC;
+}
+.whey section .row .card .btn_1 .btn:hover{
+    border:1px solid var(--main2);
+    background-color: transparent;
+    color: var(--main2);
+}
+.whey section .row .card .money{
+    font-size:3rem;
+    font-weight:600;
+}
+.whey section .row .card .btn_2{
+    display: flex;
+    align-items: flex-start;
+    gap:1rem;
+}
+.whey section .row .card .btn_2 .btn{
+    border:none;
+    background-color: #ECECEC;
+    font-size: 0.75rem;
+}
+.whey section .row .card .btn_2 .btn:hover{
+    background-color: #111111;
+    color: white;
+}
+/* Whey Promo Ends */
+/* Blog */
+.blog{
+    display: flex;
+    flex-direction: column;
+    gap:4rem;
+    margin-top:42rem;
+    position: relative;
+    margin-bottom: 4rem;
+}
+.blog .blog-head .blogImg{
+    width:12rem;
+    left:41%;
+    position: absolute;
+}
+.blog .blog-head h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    margin-top:1.5rem;
+}
+.blog .blog-head .line{
+    left: 43%;
+}
+.blog .blog-head p{
+    margin: 2rem 8rem 0 8rem;
+    color: #898787;
+    text-align: center;
+    line-height: 1.5;
+}
+.blog .blog-row{
+    display: flex;
+    align-items: flex-start;
+    gap:2rem;
+} 
+.blog .blog-row .row-card{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width:20rem;
+    gap:2.5rem;
+}
+.blog .blog-row .row-card .row-title,
+.blog .blog-row .row-card .text{
+    width: 100%;
+}
+.blog .blog-row .row-card .blog-row-card .imgbox{
+    position: relative;
+}
+.blog .blog-row .row-card .blog-row-card .imgbox img{
+    border-radius:5px;
+    margin-bottom: 0.5rem;
+}
+.blog .blog-row .row-card .blog-row-card .imgbox .date{
+    background-color: var(--main1);
+    width: 4rem;
+    height:4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    gap:.1rem;
+    text-transform: uppercase;
+    position: absolute;
+    bottom:.5rem;
+    left: 0.5rem;
+    border-radius:3px;
+    font-size: 0.8rem;
+}
+.blog .blog-row .row-card .blog-row-card .imgbox .date span{
+    font-size:1rem;
+    font-weight: 500;
+}
+.blog .blog-row .row-card .blog-row-card .blog-icon{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color:#898787;
+    margin-bottom: 0.2rem;
+}
+.blog .blog-row .row-card .blog-row-card .blog-icon span i{
+    color: var(--main1);
+    margin-right:.5rem;
+}
+.blog .blog-row .row-card .blog-row-card:hover{
+    transform: scale(.99);
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.blog .blog-row .row-card .text p{
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom:1rem;
+    color: #898787;
+}
+.blog .blog-row .row-card .text .btn{
+    border:1px solid var(--main2);
+    font-size: 0.75rem;
+}
+.blog .blog-row .row-card .text .btn:hover{
+    background-color: var(--main2);
+    color: var(--main4);
+}
+.blog .view{
+    text-align: center;
+    cursor: pointer;
+    color: #E41C26;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+/* Blog Ends */
+
+/* SignUp */
+.signUp{
+    background-color:#ECECEC;
+    min-height:25vh;
+    position: relative;
+    margin-top:10rem;
+}
+.signUp section{
+    background-color: var(--main1);
+    border-radius:5px;
+    color: white;
+    width: 64rem;
+    height:15rem;
+    position: absolute;
+    top:-5rem;
+}
+.signUp section .card{
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    gap:2rem;
+    padding:3rem 0rem;
+}
+.signUp section .card .col{
+    flex:1 1 20rem;
+    width: 35rem;
+}
+.signUp section .card .col-2{
+    flex:1 1 15rem;
+    width: 15rem;
+}
+.signUp section .card .col-2 .col-sign{
+    display: flex;
+    align-items: center;
+    gap:.5rem;
+    flex-direction: column;
+}
+.signUp section .card .col .title,
+.signUp section .card .col .col-sign{
+    width: 100%;
+}
+.signUp section .card .col .title h1{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight:400;
+}
+.signUp section .card .col .title h3{
+    text-transform: uppercase;
+    font-weight: 450;
+    margin: 0.4rem 0;
+}
+.signUp section .card .col .title p{
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+.signUp section .card .col .col-sign{
+    display: flex;
+    flex-direction: column;
+}
+.signUp section .card .col-2 .col-sign input{
+    width:80%;
+    padding: 0.4rem .2rem;
+    margin-bottom:.5rem;
+    border-radius:3px;
+    outline: none;
+    border:1px solid white;
+}
+.signUp section .card .col-2 .col-sign input:focus{
+    border-color: #222222;
+}
+.signUp section .card .col-2 .col-sign .btn{
+    background-color: var(--main2);
+    width: 80%;
+    color: white;
+}
+.signUp section .card .col-2 .col-sign .btn:hover{
+    background-color:transparent;
+    border:1px solid var(--main2);
+}
+/* SignUp Ends */
+
+/* Footer */
+footer{
+    background-color: var(--main2);
+    min-height:35vh;
+}
+footer section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 0;
+    gap:10rem;
+}
+footer section .card{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap:1rem;
+    width:10rem;
+}
+footer section .card .logo{
+    width:7rem;
+}
+footer section .card a{
+    color: white;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+footer section .direction{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap:1rem;
+}
+footer section .direction a i{
+    color: var(--main1);
+    margin-right: 0.3rem;
+}
+footer section .socials{
+    display: flex;
+    align-items: flex-start;
+    gap:1rem;
+}
+footer section .socials a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main1);
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    cursor: pointer;
+    color:var(--main2);
+    box-shadow: var(--light-shadow);
+}
+footer section .socials a:hover{
+    background-color: white;
+    color: var(--main1);
+}
+footer section .link p{
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 0.8rem;
+}
+footer section .link .links{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap:1rem;
+}
+footer section .link .links a{
+    color: white;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
+footer section .link .links a:hover{
+    color: var(--main1);
+}
+footer .lead{
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #000;
+    color:white;
+}
+footer .lead a{
+    color:var(--main1);
+}
+footer .lead a:hover{
+    text-decoration:underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Ends */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsiveness */
+@media(max-width:1440px){
+    .box .boxes .right {
+        left: 14rem;
+    }
+    section{
+        margin:0 13rem;
+    }
+    .testimonial {
+        gap:2rem;
+    }
+    
+}
+
+@media(max-width:1024px){
+    header .navg nav a {
+        font-size: 0.8rem;
+    }
+    .hero .title .head p {
+        font-size: 1.2rem;
+    }
+    .box .boxes .right {
+        left:5rem;
+    }
+    .box .boxes:nth-child(2) .right {
+        left:4rem;
+    }
+    .box .boxes:nth-child(2) .right .card .imglg {
+        left:9rem;
+    }
+    section{
+        margin: 0 5rem;
+    }
+    .about .col .about-bg .slash {
+        top: 20%;
+        left: 2rem;
+        width:28rem;
+    }
+    .commercials {
+        min-height:90vh;
+    }
+    .commercials .col-4 .slideshow-container .mySlide1{
+        gap:.5rem;
+    }
+    .commercials .col-4 .box {
+        width: 210px;
+        height: 210px;
+    }
+    .infoHead .col-sm{
+        flex:1 1 30rem;
+        width:296px;
+        height:215px;
+    }
+    .infoHead .col-sm img{
+        width: 100%;
+        height: 100%;
+    }
+    .testInfo .testHead {
+        width:28rem;
+    }
+    .testimonial .testImg .imgbg {
+        width:9rem;
+    }
+    .testimonial .testImg .imgbg:nth-child(1) img {
+        top:-6rem;
+    }
+    .testimonial .testImg .imgbg:nth-child(2) img {
+        left:-6rem;
+    }
+    .testimonial .testImg .imgbg:nth-child(3) img {
+        left:6rem;
+    }
+    .testimonial .testImg .imgbg:nth-child(4) img {
+        top:6rem;
+    }
+    .advert .bgImg {
+        width: 45rem;
+        height:20rem;
+        right:5rem;
+    }
+    .advert .vidtitle {
+        width:5rem;
+        top:6rem;
+    }
+    .trainings section {
+        margin-top:23rem;
+    }
+    .trainings .row .mySlide3 {
+        gap: 2rem;
+    }
+    .trainings .row .mySlide3 .vid {
+        width:25rem;
+    }
+    .trainings .head .imgTrain {
+        left:36%;
+    }
+    .promo .promobg{
+        height:18rem;
+    }
+    .promo section{
+       top: -4rem; 
+    }
+    .promo section .title h1 {
+        font-size:2.5rem;
+    }
+    .whey .wheyPro {
+        width:3rem;
+        top:12rem;
+    }
+    .whey .wheyBg {
+        width:60rem;
+    }
+    .whey section {
+        width:55rem;
+        height:22.8rem;
+        right:0rem;
+    }
+    .whey section .borderline {
+        width: 14rem;
+        height:17rem;
+        top:1rem;
+    }
+    .whey section .row .border .imgbox {
+        width:18rem;
+        margin-top:1rem;
+    }
+    .whey section .row .border .imgbox:nth-child(2) {
+        width: 20rem;
+        top:-1.5rem;
+        right:-2rem;
+        bottom: -1.5rem;
+    }
+    .whey section .row .card  h1 {
+        font-size:1.5rem;
+    }
+    .whey section .row .card .line {
+        width:76px;
+    }
+    .whey section .row .card p {
+        font-size: 0.7rem;
+    }
+    .whey section .row .card .btn_1 .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+    }
+    .whey section .row .card .money {
+        font-size:2rem;
+        font-weight:600;
+    }
+    .whey section .row .card .btn_2 .btn {
+        font-size: 0.65rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .blog {
+        margin-top:30rem;
+    }
+    .signUp section {
+        width:54rem;
+    }
+} 
+
+@media(max-width:768px){
+    header .navg .menu i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top:.8rem;
+        font-size: 1.2rem;
+    }
+    header .navg .menu{
+        display: block;
+    }
+    header .navg nav{
+        position: absolute;
+        align-items: flex-start;
+        flex-direction: column;
+        top: 100%;
+        right:-200px;
+        background-color:white;
+        border-radius:.1rem;
+        box-shadow: var(--light-shadow);
+        width:10rem;
+        height:50vh;
+        transition: .5s ease;
+    }
+    header .navg nav.active{
+        right: 0;
+    }
+    header .navg nav a{
+        display: block;
+        font-size:.8rem;
+        margin-left: 1rem;
+    }
+    header .navg .close{
+        display: block;
+        position: absolute;
+        top:.5rem;  
+        margin-left: 1rem;
+        cursor: pointer;
+    }
+    header .social .num span {
+        font-size: 0.8rem;
+    }
+    /* hero */
+    .hero .title .head h1 {
+        font-size:2.5rem;
+    }
+    .hero .title .head p {
+        font-size: 1rem;
+    }
+    .box .boxes .right .card p {
+        display: none;
+    }
+    .box .boxes {
+        flex: 1 1 20rem;
+        min-width:200px;
+        min-height:200px;
+    }
+    .box .boxes .right {
+        left:2rem;
+        top:3rem;
+    }
+    .box .boxes .right .card .imglg {
+        width:180px;
+        left:3rem;
+        top:0rem;
+    }
+    .box .boxes:nth-child(2) .right {
+        left:0rem;
+    }
+    .box .boxes:nth-child(2) .right .card .imglg {
+        left:8rem;
+        width:150px;
+        top:0rem;
+    }
+    .box .boxes:nth-child(3) .right {
+        left:-3rem;
+    }
+    .box .boxes:nth-child(3) .right .card .imglg {
+        top:0rem;
+        width: 120px;
+        left: 12rem;
+    }
+    .about{
+        flex-wrap: wrap;
+    }
+    .about .col .about-bg .slash {
+        left:3rem;
+        width:38rem;
+    }
+    .commercials {
+        min-height:125vh;
+    }
+    .commercials .col-4 .slideshow-container .mySlide1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:1rem;
+    }
+    .testimonial .testImg {
+        display: none;
+    }
+    .testInfo .testHead {
+        width: 32rem;
+    }
+    .sponsor {
+        margin-top: 2.5rem;
+    }
+    .sponsor section {
+        gap:1rem;
+    }
+    .sponsor section .r4 .title{
+        margin-top: 0.6rem;
+    }
+    .sponsor section .r4 .title h1{
+        font-size:1.3rem;
+    }
+    .sponsor section .r4 .title p{
+        font-size: 0.7rem;
+    }
+    .advert .bgImg {
+        width:35rem;
+        height:14rem;
+        right:5rem;
+    }
+    .advert .vidtitle {
+        width:3rem;
+        top:5rem;
+    }
+    .trainings section {
+        margin-top:18rem;
+    }
+    .trainings .row .mySlide3 {
+        gap:1rem;
+    }
+    .trainings .row .mySlide3 .vid {
+        width:20rem;
+    }
+    .trainings .head .imgTrain {
+        left:30%;
+    }
+    .trainings .row .mySlide3 .vid .bg {
+        width: 90%;
+        left:1rem;
+    }
+    .promo .promobg{
+        height:15rem;
+    }
+    .promo section{
+       top: -3rem; 
+    }
+    .promo section .title{
+        margin-top:3rem;
+    }
+    .promo section .title h1 {
+        font-size:2rem;
+    }
+    .promo section .title .line{
+        width: 120px;
+    }
+    .promo section .title  p{
+        width: 100%;
+        font-size: 0.7rem;
+    }
+    .promo section .title .btn{
+        padding: 0.4rem 0.5rem;
+        font-size: 0.6rem;
+    }
+    .whey .wheyBg {
+        width:44rem;
+    }
+    .whey section {
+        width:39rem;
+        height:17rem;
+        right: 0rem;
+        top:3.5rem;
+    }
+    .whey .wheyPro {
+        width:2.5rem;
+        top:10rem;
+    }
+    .whey section .borderline {
+        width:10rem;
+        height:14rem;
+        top:-.7rem;
+    }
+    .whey section .row .border .imgbox {
+        width:12.5rem;
+        margin-right: 3rem;
+        /* margin-top:1rem; */
+    }
+    .whey section .row .border .imgbox:nth-child(2) {
+        width:15rem;
+        top:-2rem;
+        right:-3rem;
+        bottom: -1.5rem;
+    }
+    .whey section .row .card  h6{
+        font-size: 0.5rem;
+    }
+    .whey section .row .card .line {
+        width:53px;
+    }
+    .whey section .row .card  h1 {
+        font-size:1rem;
+    }
+    .whey section .row .card p {
+        font-size: 0.6rem;
+        width: 90%;
+    }
+    .whey section .row .card .btn_1 .btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.6rem;
+    }
+    .whey section .row .card .money {
+        font-size:1.5rem;
+        font-weight:600;
+    }
+    .whey section .row .card .btn_2 .btn {
+        font-size: 0.5rem;
+        padding: 0.3rem 0.6rem;
+    }
+    .blog {
+        margin-top:23rem;
+    }
+    .blog .blog-head .blogImg {
+        left:33%;
+    }
+    .blog .blog-head p {
+        margin: 2rem 2rem 0 2rem;
+    }
+    .blog .blog-row {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:1.5rem;
+    }
+    .blog .blog-row .row-card {
+        width:18rem;
+    }
+    .signUp {
+        height:28vh;
+    }
+    .signUp section {
+        width:37rem;
+        height:15rem;
+    }
+    .signUp section .card .col .title h1 {
+        font-size: 1.8rem;
+        font-weight:350;
+    }
+    .signUp section .card .col .title h3 {
+        font-size: 0.8rem;
+        font-weight: 450;
+    }
+    .signUp section .card .col-2 .col-sign input,
+    .signUp section .card .col-2 .col-sign .btn{
+        width:100%;
+    }
+    footer section {
+        gap: 3rem;
+    }
+}
+
+@media(max-width:426px){
+    header .logo{
+        width:90%;
+        height: 45px;
+    }
+    header .logo img{
+        position: absolute;
+        width:20%;
+        left: 0.4rem;
+    }
+    header .social .num {
+        display: none;
+    }
+    header .social {
+        display: none;
+    }
+    header .navg .menu {
+        background-color: var(--main2);
+    }
+    .hero {
+        padding-top:40px;
+    }
+    .hero .title {
+        top:30%;
+    }
+    .hero .title .head h1 {
+        font-size:1rem;
+    }
+    .hero .title .head p {
+        font-size: 0.5rem;
+        margin:.5rem 0;
+    }
+    .hero .title .head .btn {
+        font-size: 0.5rem;
+        padding: 0.5rem 0.8rem;
+    }
+    .box{
+        flex-wrap: wrap;
+    }
+    .box .boxes {
+        flex: 1 1 20rem;
+        min-width:150px;
+        min-height:150px;
+    }
+    .box .boxes .right {
+        left:10rem;
+        top:3rem;
+    }
+    .box .boxes .right .card h2 {
+        font-size: 0.7rem;
+    }
+    .box .boxes .right .card .imglg {
+        width: 100px;
+        left:6rem;
+        top:1rem;
+    }
+    .box .boxes:nth-child(2) .right {
+        left:3rem;
+    }
+    .box .boxes:nth-child(2) .right .card .imglg {
+        width: 100px;
+        top: 1rem;
+    }
+    .box .boxes:nth-child(3) .right .card .imglg {
+        width: 80px;
+        left:9rem;
+    }
+    .about .col .about-bg .slash {
+        top: 20%;
+        left:1.5rem;
+        width:22rem;
+    }
+    section{
+        margin:0 2rem;
+    }
+    .about .col .row .fitness .box {
+        justify-content:flex-start;
+        gap:1rem;
+    }
+    .about {
+        gap:0rem;
+    }
+    .about .col .row .info .title h1 {
+        font-size: 2rem;
+    }
+    .about .col .row .info .line {
+        width: 110px;
+    }
+    .commercials .col-4 .slideshow-container .mySlide1{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .commercials {
+        min-height:195vh;
+    }
+    .commercials .col-1 .title .info {
+        top:26%;
+    }
+    .infoHead {
+        flex-direction: column;
+    }
+    .infoHead .col-sm {
+        flex: 1 1 10rem;
+        width:100%;
+        height: 100%;
+    }
+    .testimonial .testImg .imgbg {
+        display: none;
+    }
+    .testInfo .testHead {
+        width:23rem;
+    }
+    .testimonial{
+        margin-top:28rem;
+    }
+    .testInfo .testHead .title h1 {
+        font-size:2.5rem;
+    }
+    .line {
+        width:80px;
+    }
+    .sponsor section{
+        margin-right:1rem;
+        margin-left: 1rem;
+    }
+    .sponsor section .r4 .imgX {
+        width:30px;
+        height:30px;
+    }
+    .sponsor section .r4 .title h1{
+        font-size: 0.6rem;
+    }
+    .sponsor section .r4 .title p{
+        font-size: 0.45rem;
+    }
+    .advert .bgImg {
+        width:16rem;
+        height:5rem;
+        right:5rem;
+    }
+    .advert .vidtitle {
+        width:1rem;
+        top:2rem;
+    }
+    .trainings section {
+        margin-top:8rem;
+    }
+    .trainings .row .mySlide3 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap:3.5rem;
+    }
+    .trainings .head .imgTrain {
+        left:23%;
+        width:12rem;
+    }
+    .trainings .head  .card h1 {
+        font-size:1.7rem;
+    }
+    .promo section {
+        flex-wrap: wrap;
+    }
+    .promo .promobg{
+        min-height:36rem;
+    }
+    .promo section{
+        margin-top:2rem;
+    }
+    .whey .wheyBg {
+        width:24rem;
+        height:30rem;
+    }
+    .whey section {
+        width: 22rem;
+        height:30rem;
+    }
+    .whey section .header {
+        flex-wrap: wrap;
+        margin-left: 1.5rem;
+    }
+    .whey section .header .row .border{
+        width:20rem;
+    }
+    .whey section .borderline {
+        width: 12rem;
+        height: 14rem;
+        top:0rem;
+        left: 0;
+    }
+    .whey section .row .border .imgbox {
+        width: 14rem;
+    }
+    .whey section .row .border .imgbox:nth-child(2){
+        width: 16.5rem;
+        left:4rem;
+    }
+    .whey section .row1 {
+        align-items: flex-start;
+        gap:0;
+    }
+    .whey .wheyPro {
+        top: 15rem;
+    }
+    .blog {
+        margin-top:37rem;
+    }
+    .blog .blog-row .row-card {
+        width:22rem;
+    }
+    .blog .blog-head .blogImg {
+        left:33%;
+        width:7rem;
+        top:.7rem;
+    }
+    .blog .blog-head .line {
+        left:38%;
+    }
+    .blog .blog-head h1 {
+        font-size:1.5rem;
+        margin-top: 1.5rem;
+    }
+    .blog .blog-head p {
+        margin: .8rem 2rem 0 2rem;
+    }
+    .blog .blog-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .signUp {
+        height:55vh;
+    }
+    .signUp section {
+        width:22.5rem;
+        height:25rem;
+    } 
+    .signUp section .card {
+        flex-wrap: wrap;
+    }
+    .signUp section .card .col .title h1 {
+        font-size:1.7rem;
+        font-weight:300;
+    }
+    .signUp section .card .col .title h3 {
+        font-weight:350;
+        font-size:.9rem;
+    }
+    footer section {
+        grid-template-columns: repeat(2, 1fr);
+        gap:3rem;
+    }
+    
+}
+@media(max-width:376px){
+    .about .col .about-bg .slash {
+        top: 25%;
+        width:19.5rem;
+        left:1.5rem;
+    }
+    .about .col .row .info .title h1 {
+        font-size:1.5rem;
+    }
+    .about .col .row .info .line {
+        width:85px;
+    }
+    .testInfo .testHead .title h1 {
+        font-size:2.5rem;
+    }
+    .testInfo .testHead{
+        width:20rem;
+    }
+    .line {
+        width:75px;
+    }
+    .sponsor section .r4 .title{
+        margin-top: 0;
+    }
+    .testInfo .testHead {
+        width:19rem;
+    }
+    .advert .bgImg {
+        width:16rem;
+        height:3rem;
+        right:3rem;
+    }
+    .advert .vidtitle {
+        width:1rem;
+        top:0rem;
+    }
+    .trainings .head .imgTrain {
+        left:20%;
+    }
+    .promo .promobg{
+        min-height:33rem;
+    }
+    .whey .wheyPro {
+        width:1.5rem;
+    }
+    .whey section {
+        right: 0;
+        margin-right: 0;
+    }
+    .whey section .header {
+        margin-left:0;
+    }
+    .whey section .header .row{
+        margin-left: 1rem;
+    }
+    .whey section .row .border .imgbox{
+        width:12rem;
+        margin-top:2rem;
+    }
+    .whey section .row .border .imgbox:nth-child(2) {
+        width:14.5rem;
+        left: 4rem;
+    }
+    .blog .blog-row .row-card {
+        width:19rem;
+    }
+    .blog .blog-head p {
+        margin: .8rem 0rem 0 0rem;
+    }
+    .signUp section {
+        width:19rem;
+    }
+    footer .lead{
+        font-size: 0.8rem;
+    }
+    
+}
+@media(max-width:320px){
+    header .logo {
+        width:87%;
+    }
+    .box .boxes .right {
+        left:8rem;
+    }
+    .box .boxes:nth-child(2) .right {
+        left:0rem;
+    }
+    .box .boxes:nth-child(3) .right{
+        left:-4rem;
+    }
+    .about .col .about-bg .slash {
+        top: 25%;
+        width:16rem;
+        left:1.5rem;
+    }
+    .about .col .row .info .title h1 {
+        font-size:1.5rem;
+    }
+    section{
+        margin: 0 1.5rem;
+    }
+    .testInfo .testHead .title h1 {
+        font-size: 2rem;
+    }
+    .testInfo .testHead{
+        width:16rem;
+    }
+    .line {
+        width:60px;
+    }
+    .advert .bgImg {
+        width:14rem;
+        height:3rem;
+        right:5rem;
+    }
+    .advert .vidtitle {
+        width:1rem;
+        top:0rem;
+    }
+    .trainings .head .imgTrain {
+        left:15%;
+    }
+    .trainings .row .mySlide3 .vid {
+        width:17rem;
+    }
+    .trainings .row .mySlide3 .vid .bg p{
+        font-size: 0.7rem;
+    }
+    .promo .promobg{
+        min-height:31.5rem;
+    }
+    .whey section .row .border .imgbox{
+        width: 11.5rem;
+    }
+    .whey section .row .border .imgbox:nth-child(2) {
+        width: 14rem;
+        left: 4rem;
+    }
+    .whey section .header .row .border {
+        width:15rem;
+    }
+    .whey section .header .row{
+        margin-left:4rem;
+    }
+    .blog .blog-row .row-card {
+        width:17rem;
+    }
+    .signUp section {
+        width:17rem;
+    }
+    .signUp section .card .col .title h1 {
+        font-size: 1.5rem;
+    }
+    .signUp section .card .col .title h3 {
+        font-weight: 300;
+        font-size: .7rem;
+    }
+    footer section{
+        gap:2rem;
+    }
+    footer .lead{
+        font-size: 0.8rem;
+    }
+}
