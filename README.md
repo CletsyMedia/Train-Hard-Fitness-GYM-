@@ -1,2 +1,2 @@
-# Train-Hard-Fitness-GYM-
+# Train-Hard Fitness-GYM
 Static fitness website best on project request
