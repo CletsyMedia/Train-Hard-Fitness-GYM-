@@ -1,2 +1,2 @@
 Fitness GYM
-Static fitness website best on project request
+Static fitness website based on project request
